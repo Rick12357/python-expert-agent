@@ -1,4 +1,4 @@
-import { mkdir, cp, stat, readFile, writeFile } from "node:fs/promises";
+import { mkdir, cp, stat, readdir, readFile, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { join, dirname, resolve } from "node:path";
 import { homedir } from "node:os";
@@ -35,6 +35,23 @@ async function prompt(message) {
   });
 }
 
+async function countFiles(dir) {
+  let count = 0;
+  try {
+    const entries = await readdir(dir, { withFileTypes: true });
+    for (const entry of entries) {
+      if (entry.isDirectory()) {
+        count += await countFiles(join(dir, entry.name));
+      } else {
+        count++;
+      }
+    }
+  } catch {
+    // ignore
+  }
+  return count;
+}
+
 export async function init(projectPath, useGlobal, force) {
   const home = homedir();
   let targetBase;
@@ -56,10 +73,15 @@ export async function init(projectPath, useGlobal, force) {
   const opencodeTarget = join(targetBase, ".opencode");
   const agentsTarget = join(targetBase, "AGENTS.md");
 
+  console.log(`   Source directory: ${sourceDir}`);
+
   if (!existsSync(opencodeSource)) {
     console.error("Error: Could not find .opencode directory in package");
     process.exit(1);
   }
+
+  const sourceFileCount = await countFiles(opencodeSource);
+  console.log(`   Source .opencode contains ${sourceFileCount} files`);
 
   const opencodeExists = existsSync(opencodeTarget);
   const agentsExists = existsSync(agentsTarget);
@@ -103,6 +125,14 @@ export async function init(projectPath, useGlobal, force) {
       },
     });
 
+    const targetFileCount = await countFiles(opencodeTarget);
+    console.log(`   Copied ${targetFileCount} files to .opencode/`);
+
+    if (targetFileCount === 0) {
+      console.error("\n❌ Error: No files were copied to .opencode/");
+      process.exit(1);
+    }
+
     console.log("   Copying AGENTS.md...");
     await cp(agentsSource, agentsTarget);
 
@@ -122,6 +152,7 @@ export async function init(projectPath, useGlobal, force) {
     console.log("\nDocumentation: https://github.com/amrahman90/python-expert-agent");
   } catch (error) {
     console.error(`\n❌ Error during installation: ${error.message}`);
+    console.error(error.stack);
     process.exit(1);
   }
 }
