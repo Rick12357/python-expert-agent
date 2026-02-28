@@ -7,9 +7,16 @@
     "python-expert-agent": "./bin/python-expert-agent.js"
   },
   "files": [
-    "bin/",
-    "src/",
-    ".opencode/",
+    "bin",
+    "src",
+    ".opencode/agent",
+    ".opencode/subagents",
+    ".opencode/skills",
+    ".opencode/context",
+    ".opencode/config",
+    ".opencode/docs",
+    ".opencode/config.json",
+    ".opencode/opencode.json",
     "AGENTS.md"
   ],
   "keywords": [
