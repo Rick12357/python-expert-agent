@@ -1,0 +1,29 @@
+# Source maps and dev files
+*.map
+
+# Development
+.github/
+.gitignore
+*.test.js
+*.spec.js
+__tests__/
+coverage/
+
+# IDE
+.vscode/
+.idea/
+
+# Environment
+.env
+.env.local
+
+# Misc
+*.bak
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Exclude OpenCode internal dependencies (bundled but not for distribution)
+.opencode/node_modules/
+.opencode/package.json
+.opencode/bun.lock

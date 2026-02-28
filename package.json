@@ -1,0 +1,42 @@
+{
+  "name": "python-expert-agent",
+  "version": "0.0.1",
+  "description": "Python Expert Agent pack for OpenCode - 10 skills, 4 subagents, production-ready FastAPI patterns",
+  "type": "module",
+  "bin": {
+    "python-expert-agent": "./bin/python-expert-agent.js"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    ".opencode/",
+    "AGENTS.md"
+  ],
+  "keywords": [
+    "opencode",
+    "python",
+    "agent",
+    "fastapi",
+    "pydantic",
+    "sqlalchemy",
+    "pytest",
+    "ai",
+    "llm",
+    "asyncio",
+    "backend",
+    "api"
+  ],
+  "author": "amrahman90",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amrahman90/python-expert-agent.git"
+  },
+  "bugs": {
+    "url": "https://github.com/amrahman90/python-expert-agent/issues"
+  },
+  "homepage": "https://github.com/amrahman90/python-expert-agent#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
